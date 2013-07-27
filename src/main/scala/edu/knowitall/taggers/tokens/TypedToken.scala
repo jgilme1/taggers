@@ -14,9 +14,8 @@ case class TypedToken(token: Lemmatized[ChunkedToken], types: Set[Type]) {
 }
 
 object TypedToken{
-  
-  def makeTypedToken(token: Lemmatized[ChunkedToken], types: List[Type]): TypedToken = {
-    TypedToken(token, types.filter(_.interval.intersects(token.offsets)).toSet)
+    def makeTypedTokenFromJavaSet(token: Lemmatized[ChunkedToken], types: java.util.Set[Type]): TypedToken = {
+    val scalaTypeSet = scala.collection.JavaConversions.collectionAsScalaIterable(types).toSet
+    TypedToken(token, scalaTypeSet.filter(_.interval.intersects(token.offsets)))
   }
-  
 }
