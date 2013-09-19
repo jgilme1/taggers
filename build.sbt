@@ -1,3 +1,7 @@
+import AssemblyKeys._
+
+assemblySettings
+
 organization := "edu.washington.cs.knowitall.taggers"
 
 name := "taggers"
@@ -11,6 +15,7 @@ crossScalaVersions := Seq("2.10.1", "2.9.3")
 scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head }
 
 resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+
 
 libraryDependencies ++= Seq(
     "com.google.guava" % "guava" % "13.0.1",
@@ -40,6 +45,13 @@ resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repos
 publishMavenStyle := true
 
 publishMavenStyle := true
+
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+  {
+    case PathList(ps @ _*) if ps.last == "UserDataHandler.class" => MergeStrategy.first
+    case x => old(x)
+  }
+ }
 
 publishTo <<= version { (v: String) =>
   val nexus = "https://oss.sonatype.org/"
