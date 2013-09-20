@@ -2,6 +2,7 @@ package edu.knowitall.taggers.tag;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.jdom2.Element;
@@ -33,7 +34,7 @@ public class StanfordNamedEntityTagger extends Tagger {
       List<edu.knowitall.tool.typer.Type> types = scala.collection.JavaConversions.asJavaList(typer.apply(scala.collection.JavaConversions.asScalaBuffer(SentenceFunctions.tokens(sentence))));
       List<Type> finalTypes = new ArrayList<Type>(types.size());
       for (edu.knowitall.tool.typer.Type type : types) {
-          finalTypes.add(Type.fromSentence(sentence, type.name(), type.source(), type.tokenInterval()));
+          finalTypes.add(Type.fromSentence(sentence, type.name(), type.source(), type.tokenInterval(),new HashMap<String,String>()));
       }
 
       return finalTypes;

@@ -3,6 +3,7 @@ package edu.knowitall.taggers.tag;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.jdom2.Element;
@@ -83,7 +84,7 @@ public abstract class Tagger implements XmlSerializable {
     }
 
     public Type createType(List<Lemmatized<ChunkedToken>> sentence, Interval interval) {
-        return Type.fromSentence(sentence, this.descriptor, this.source, interval);
+        return Type.fromSentence(sentence, this.descriptor, this.source, interval, new HashMap<String,String>());
     }
 
     public void constrain(Constraint constraint) {

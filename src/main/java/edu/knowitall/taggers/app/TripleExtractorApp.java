@@ -117,7 +117,17 @@ public class TripleExtractorApp {
 		            		}
 		            	});
 		            	for(Type type: levelTypes){
+
 		            		pw.write(type + " ");
+		            		if(directoryList.get(directoryList.size()-1) == level){
+			            		Map<String,String> groupMap = type.groupMap();
+			            		if(!groupMap.isEmpty()){
+			            			for(String k : groupMap.keySet()){
+			            				pw.write("\t"+k+"-"+groupMap.get(k));
+			            				
+			            			}
+			            		}
+		            		}
 		            	}
 	            	}
 	            }
