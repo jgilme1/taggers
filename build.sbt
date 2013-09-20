@@ -10,6 +10,10 @@ description := "Tag sentences with XML-specified logic."
 
 version := "0.2"
 
+mainClass in assembly := Some("edu.knowitall.taggers.app.TripleExtractorApp")
+
+jarName in assembly := "recursiveTaggerApp.jar"
+
 crossScalaVersions := Seq("2.10.1", "2.9.3")
 
 scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head }
@@ -25,6 +29,7 @@ libraryDependencies ++= Seq(
     "edu.washington.cs.knowitall.nlptools" %% "nlptools-typer-stanford" % "2.4.2",
     "edu.washington.cs.knowitall" % "openregex" % "1.0.3",
     "org.apache.commons" % "commons-lang3" % "3.1",
+    "org.apache.commons" % "commons-io" % "1.3.2",
     "org.jdom" % "jdom2" % "2.0.5",
     "junit" % "junit" % "4.11" % "test",
     "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
