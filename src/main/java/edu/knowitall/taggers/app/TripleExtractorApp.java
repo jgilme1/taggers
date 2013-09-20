@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.jdom2.JDOMException;
 
+import edu.knowitall.collection.immutable.Interval;
 import edu.knowitall.taggers.Type;
 import edu.knowitall.taggers.tag.TaggerCollection;
 import edu.knowitall.tool.chunk.ChunkedToken;
@@ -39,7 +43,30 @@ public class TripleExtractorApp {
 			
 			String inputFileString = FileUtils.readFileToString(new File(inputPath));
 			
+			//create map from subdirectory name to list of xml pattern file names
+			Map<String,List<String>> FileStringMap = new HashMap<String,List<String>>();
+			File taggerDirectory = new File(taggerPath);
+			
+			for(File d: taggerDirectory.listFiles()){
+				String key = d.getName();
+				List<String> xmlList = new ArrayList<String>();
+				for(File x: d.listFiles()){
+					if(x.getName().endsWith(".xml")){
+						xmlList.add(x.getName());
+					}
+				}
+				FileStringMap.put(key,xmlList);
+			}
+			
+			//create sorted subdirectory list
+			List<String> directoryList = new ArrayList<String>(FileStringMap.keySet());
+			java.util.Collections.sort(directoryList);
+			
+			
+			
 			PrintWriter pw = new PrintWriter(new File(outputPath));
+			
+			writeHeader(pw,directoryList);
 			
 	        OpenNlpChunker chunker = new OpenNlpChunker();
 	        MorphaStemmer morpha = new MorphaStemmer();
@@ -54,17 +81,91 @@ public class TripleExtractorApp {
 	                tokens.add(lemma);
 	            }
 	            
-	            pw.write(line+"\n");
-	            
+	            pw.write(line+"\t");
+	            for(Lemmatized<ChunkedToken> tok: tokens){
+	            	pw.write(tok.token().postag()+" ");
+	            }	            
 	            List<Type> types = t.tag(tokens);
+	            Map<String,List<Type>> levelMap = new HashMap<String,List<Type>>();
 	            for (Type type : types) {
-	                pw.write(type + "\n");
+	            	String level = findLevel(type,taggerDirectory);
+	            	if(levelMap.containsKey(level)){
+	            	    levelMap.get(level).add(type);
+	            	}
+	            	else{
+	            		List<Type> x = new ArrayList<Type>();
+	                    x.add(type);
+	            		levelMap.put(level,x);
+	            	}
+//	            	pw.write(type.interval().toString());
+//	            	pw.write(type.match());
+//	            	if(type.source() != null)
+//	            	  pw.write(type.source());
+//	            	pw.write(type.descriptor());
+//	                pw.write(type + "\n");
 	            }
+	            
+	            for(String level: directoryList){
+		            pw.write("\t");
+		            
+		            //sort thest Types by offset
+		            if(levelMap.containsKey(level)){
+	            	    List<Type> levelTypes = levelMap.get(level);
+		            	java.util.Collections.sort(levelTypes, new Comparator<Type> (){
+		            		public int compare(Type t1, Type t2){
+		            			return t1.interval().compare(t2.interval());
+		            		}
+		            	});
+		            	for(Type type: levelTypes){
+		            		pw.write(type + " ");
+		            	}
+	            	}
+	            }
+	            
+	            
+	            
+	            
+	            
 	            pw.write("\n");
 				
 			}
 			
 			pw.close();
+	}
+	
+	private static void writeHeader(PrintWriter pw, List<String> directoryList){		
+		pw.write("sentence\tpos");
+		
+		for(String subDirName: directoryList){
+			pw.write("\t"+subDirName+"-tags");
+		}
+		
+		pw.write("\tPattern components\n");
+	}
+	
+	
+	private static String findLevel(Type type, File taggerDirectory) throws IOException{
+		
+		List<String> typeDescriptors = new ArrayList<String>();
+		typeDescriptors.add(type.descriptor());
+		if(type.source() != null){
+			typeDescriptors.add(type.source());
+		}
+		
+		for(File subDir : taggerDirectory.listFiles()){
+			String level = subDir.getName();
+			for(File x: subDir.listFiles()){
+				String xString = FileUtils.readFileToString(x);
+				for(String descriptionString : typeDescriptors){
+					if(xString.indexOf("descriptor=\""+descriptionString) != -1){
+						return level;
+					}
+					
+				}
+			}
+		}
+		
+		return "-1";
 	}
 }
 			
