@@ -1,0 +1,2 @@
+[0m[[33mwarn[0m] [0mBinary version (2.10) for dependency org.scala-lang#scala-library;2.10.0[0m
+[0m[[33mwarn[0m] [0m	in edu.washington.cs.knowitall.taggers#webapp_2.9.2;0.0 differs from Scala binary version in project (2.9.2).[0m

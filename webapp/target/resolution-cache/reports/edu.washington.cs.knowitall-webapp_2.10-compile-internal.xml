@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="edu.washington.cs.knowitall"
+		module="webapp_2.10"
+		revision="0.0"
+		conf="compile-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
+		date="20130920091335"/>
+	<dependencies>
+		<module organisation="play" name="play_2.10">
+			<revision name="2.1.0" status="release" pubdate="20130506043924" resolver="Typesafe Releases Repository" artresolver="Typesafe Releases Repository" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="36">
+				<metadata-artifact status="no" details="" size="6409" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/play/play_2.10/2.1.0/play_2.10-2.1.0.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="webapp_2.10" conf="optional, compile, provided, compile-internal" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="0.0"/>
+				<artifacts>
+					<artifact name="play_2.10" type="jar" ext="jar" status="no" details="" size="4602427" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play_2.10/jars/play_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/play/play_2.10/2.1.0/play_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sf.ehcache" name="ehcache-core">
+			<revision name="2.6.0" status="release" pubdate="20120724075024" resolver="public" artresolver="public" homepage="http://ehcache.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="64">
+				<license name="The Apache Software License, Version 2.0" url="src/assemble/EHCACHE-CORE-LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="14770" time="0" location="/homes/gws/jgilme1/.ivy2/cache/net.sf.ehcache/ehcache-core/ivy-2.6.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/net/sf/ehcache/ehcache-core/2.6.0/ehcache-core-2.6.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="ehcache-core" type="jar" ext="jar" status="no" details="" size="1332004" time="0" location="/homes/gws/jgilme1/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/net/sf/ehcache/ehcache-core/2.6.0/ehcache-core-2.6.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-mapper-asl">
+			<revision name="1.9.10" status="release" pubdate="20120923195612" resolver="public" artresolver="public" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="63">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2655" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.10/jackson-mapper-asl-1.9.10.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="jackson-mapper-asl" type="jar" ext="jar" status="no" details="" size="780421" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.10.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.10/jackson-mapper-asl-1.9.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
+			<revision name="1.9.10" status="release" pubdate="20120923195540" resolver="public" artresolver="public" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="62">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2438" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.10/jackson-core-asl-1.9.10.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="2.1.0"/>
+				<caller organisation="org.codehaus.jackson" name="jackson-mapper-asl" conf="compile, runtime" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="1.9.10"/>
+				<artifacts>
+					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232119" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.10.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.10/jackson-core-asl-1.9.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="oauth.signpost" name="signpost-commonshttp4">
+			<revision name="1.2.1.2" status="release" pubdate="20120226001621" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="58">
+				<metadata-artifact status="no" details="" size="3714" time="0" location="/homes/gws/jgilme1/.ivy2/cache/oauth.signpost/signpost-commonshttp4/ivy-1.2.1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/oauth/signpost/signpost-commonshttp4/1.2.1.2/signpost-commonshttp4-1.2.1.2.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.2.1.2" rev-constraint-default="1.2.1.2" rev-constraint-dynamic="1.2.1.2" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="signpost-commonshttp4" type="jar" ext="jar" status="no" details="" size="6512" time="0" location="/homes/gws/jgilme1/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/oauth/signpost/signpost-commonshttp4/1.2.1.2/signpost-commonshttp4-1.2.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpclient">
+			<revision name="4.0.1" status="release" pubdate="20130506044653" resolver="Typesafe Releases Repository" artresolver="Typesafe Releases Repository" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="60">
+				<license name="Apache License" url="../LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="4948" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.httpcomponents/httpclient/ivy-4.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.pom"/>
+				<caller organisation="oauth.signpost" name="signpost-commonshttp4" conf="compile, runtime" rev="4.0.1" rev-constraint-default="4.0.1" rev-constraint-dynamic="4.0.1" callerrev="1.2.1.2"/>
+				<artifacts>
+					<artifact name="httpclient" type="jar" ext="jar" status="no" details="" size="291037" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpcore">
+			<revision name="4.0.1" status="release" pubdate="20130506044650" resolver="Typesafe Releases Repository" artresolver="Typesafe Releases Repository" homepage="http://hc.apache.org/httpcomponents-core/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="59">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4248" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.httpcomponents/httpcore/ivy-4.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.pom"/>
+				<caller organisation="oauth.signpost" name="signpost-commonshttp4" conf="compile, runtime" rev="4.0.1" rev-constraint-default="4.0.1" rev-constraint-dynamic="4.0.1" callerrev="1.2.1.2"/>
+				<caller organisation="org.apache.httpcomponents" name="httpclient" conf="compile, runtime" rev="4.0.1" rev-constraint-default="4.0.1" rev-constraint-dynamic="4.0.1" callerrev="4.0.1"/>
+				<artifacts>
+					<artifact name="httpcore" type="jar" ext="jar" status="no" details="" size="172888" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="oauth.signpost" name="signpost-core">
+			<revision name="1.2.1.2" status="release" pubdate="20120226001606" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="56">
+				<metadata-artifact status="no" details="" size="3140" time="0" location="/homes/gws/jgilme1/.ivy2/cache/oauth.signpost/signpost-core/ivy-1.2.1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/oauth/signpost/signpost-core/1.2.1.2/signpost-core-1.2.1.2.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.2.1.2" rev-constraint-default="1.2.1.2" rev-constraint-dynamic="1.2.1.2" callerrev="2.1.0"/>
+				<caller organisation="oauth.signpost" name="signpost-commonshttp4" conf="compile, runtime" rev="1.2.1.2" rev-constraint-default="1.2.1.2" rev-constraint-dynamic="1.2.1.2" callerrev="1.2.1.2"/>
+				<artifacts>
+					<artifact name="signpost-core" type="jar" ext="jar" status="no" details="" size="45277" time="0" location="/homes/gws/jgilme1/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/oauth/signpost/signpost-core/1.2.1.2/signpost-core-1.2.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.3" status="release" pubdate="20051108142951" resolver="public" artresolver="public" homepage="http://jakarta.apache.org/commons/codec/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="57">
+				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2791" time="0" location="/homes/gws/jgilme1/.ivy2/cache/commons-codec/commons-codec/ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.3/commons-codec-1.3.pom"/>
+				<caller organisation="oauth.signpost" name="signpost-core" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="1.2.1.2"/>
+				<caller organisation="org.apache.httpcomponents" name="httpclient" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="4.0.1"/>
+				<artifacts>
+					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="46725" time="0" location="/homes/gws/jgilme1/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.3/commons-codec-1.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.ning" name="async-http-client">
+			<revision name="1.7.6" status="release" pubdate="20120827152241" resolver="public" artresolver="public" homepage="http://github.com/sonatype/async-http-client" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="55">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="7137" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.ning/async-http-client/ivy-1.7.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/ning/async-http-client/1.7.6/async-http-client-1.7.6.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.7.6" rev-constraint-default="1.7.6" rev-constraint-dynamic="1.7.6" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="async-http-client" type="jar" ext="jar" status="no" details="" size="477054" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.7.6.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/ning/async-http-client/1.7.6/async-http-client-1.7.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-slf4j_2.10">
+			<revision name="2.1.0" status="release" pubdate="20121222042327" resolver="public" artresolver="public" homepage="http://akka.io" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="53">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3029" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.1.0/akka-slf4j_2.10-2.1.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="akka-slf4j_2.10" type="bundle" ext="jar" status="no" details="" size="13426" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/bundles/akka-slf4j_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.1.0/akka-slf4j_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.10">
+			<revision name="2.1.0" status="release" pubdate="20121222042239" resolver="public" artresolver="public" homepage="http://akka.io" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="52">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2641" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.1.0/akka-actor_2.10-2.1.0.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="compile, runtime" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="akka-actor_2.10" type="bundle" ext="jar" status="no" details="" size="1892369" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/bundles/akka-actor_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.1.0/akka-actor_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-classic">
+			<revision name="1.0.7" status="release" pubdate="20120823151347" resolver="public" artresolver="public" homepage="http://logback.qos.ch" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="51">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="10066" time="0" location="/homes/gws/jgilme1/.ivy2/cache/ch.qos.logback/logback-classic/ivy-1.0.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.7/logback-classic-1.0.7.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.0.7" rev-constraint-default="1.0.7" rev-constraint-dynamic="1.0.7" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="251679" time="0" location="/homes/gws/jgilme1/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.0.7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.7/logback-classic-1.0.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-core">
+			<revision name="1.0.7" status="release" pubdate="20120823151302" resolver="public" artresolver="public" homepage="http://logback.qos.ch" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="50">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="9604" time="0" location="/homes/gws/jgilme1/.ivy2/cache/ch.qos.logback/logback-core/ivy-1.0.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.7/logback-core-1.0.7.pom"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.0.7" rev-constraint-default="1.0.7" rev-constraint-dynamic="1.0.7" callerrev="1.0.7"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.0.7" rev-constraint-default="1.0.7" rev-constraint-dynamic="1.0.7" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="364399" time="0" location="/homes/gws/jgilme1/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.0.7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.7/logback-core-1.0.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jcl-over-slf4j">
+			<revision name="1.6.6" status="release" pubdate="20120611074300" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="49">
+				<metadata-artifact status="no" details="" size="4573" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/jcl-over-slf4j/ivy-1.6.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.6.6/jcl-over-slf4j-1.6.6.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="jcl-over-slf4j" type="jar" ext="jar" status="no" details="" size="17289" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.6.6.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.6.6/jcl-over-slf4j-1.6.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jul-to-slf4j">
+			<revision name="1.6.6" status="release" pubdate="20120611074322" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="48">
+				<metadata-artifact status="no" details="" size="4612" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/jul-to-slf4j/ivy-1.6.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.6.6/jul-to-slf4j-1.6.6.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="jul-to-slf4j" type="jar" ext="jar" status="no" details="" size="4955" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.6.6.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.6.6/jul-to-slf4j-1.6.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.5.9.Final" status="release" pubdate="20121024232852" resolver="public" artresolver="public" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="47">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="6423" time="0" location="/homes/gws/jgilme1/.ivy2/cache/io.netty/netty/ivy-3.5.9.Final.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/io/netty/netty/3.5.9.Final/netty-3.5.9.Final.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="3.5.9.Final" rev-constraint-default="3.5.9.Final" rev-constraint-dynamic="3.5.9.Final" callerrev="2.1.0"/>
+				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="3.4.4.Final" rev-constraint-default="3.4.4.Final" rev-constraint-dynamic="3.4.4.Final" callerrev="1.7.6"/>
+				<artifacts>
+					<artifact name="netty" type="bundle" ext="jar" status="no" details="" size="1128961" time="0" location="/homes/gws/jgilme1/.ivy2/cache/io.netty/netty/bundles/netty-3.5.9.Final.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/io/netty/netty/3.5.9.Final/netty-3.5.9.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="3.4.4.Final" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="3.5.9.Final"/>
+				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="3.4.4.Final" rev-constraint-default="3.4.4.Final" rev-constraint-dynamic="3.4.4.Final" callerrev="1.7.6"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-logging" name="commons-logging">
+			<revision name="1.1.1" status="release" pubdate="20071126122410" resolver="public" artresolver="public" homepage="http://commons.apache.org/logging" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="61">
+				<metadata-artifact status="no" details="" size="3941" time="0" location="/homes/gws/jgilme1/.ivy2/cache/commons-logging/commons-logging/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom"/>
+				<caller organisation="org.apache.httpcomponents" name="httpclient" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="4.0.1"/>
+				<artifacts>
+					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="60686" time="0" location="/homes/gws/jgilme1/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="play-iteratees_2.10">
+			<revision name="2.1.0" status="release" pubdate="20130506043925" resolver="Typesafe Releases Repository" artresolver="Typesafe Releases Repository" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="44">
+				<metadata-artifact status="no" details="" size="2809" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play-iteratees_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/play/play-iteratees_2.10/2.1.0/play-iteratees_2.10-2.1.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="play-iteratees_2.10" type="jar" ext="jar" status="no" details="" size="642750" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play-iteratees_2.10/jars/play-iteratees_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/play/play-iteratees_2.10/2.1.0/play-iteratees_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.0.0" status="release" pubdate="20121015060115" resolver="public" artresolver="public" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="46">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2725" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe/config/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/config/1.0.0/config-1.0.0.pom"/>
+				<caller organisation="play" name="play-iteratees_2.10" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.1.0"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.10" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="config" type="bundle" ext="jar" status="no" details="" size="185676" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.typesafe/config/bundles/config-1.0.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/config/1.0.0/config-1.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-stm" name="scala-stm_2.10.0">
+			<revision name="0.6" status="release" pubdate="20121220085611" resolver="public" artresolver="public" homepage="http://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="45">
+				<license name="BSD" url="https://github.com/nbronson/scala-stm/blob/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2535" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.scala-stm/scala-stm_2.10.0/ivy-0.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10.0/0.6/scala-stm_2.10.0-0.6.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="0.6" rev-constraint-default="0.6" rev-constraint-dynamic="0.6" callerrev="2.1.0"/>
+				<caller organisation="play" name="play-iteratees_2.10" conf="compile, runtime" rev="0.6" rev-constraint-default="0.6" rev-constraint-dynamic="0.6" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="scala-stm_2.10.0" type="jar" ext="jar" status="no" details="" size="609513" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.scala-stm/scala-stm_2.10.0/jars/scala-stm_2.10.0-0.6.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10.0/0.6/scala-stm_2.10.0-0.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="templates_2.10">
+			<revision name="2.1.0" status="release" pubdate="20130506043924" resolver="Typesafe Releases Repository" artresolver="Typesafe Releases Repository" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="40">
+				<metadata-artifact status="no" details="" size="2523" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/templates_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/play/templates_2.10/2.1.0/templates_2.10-2.1.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="templates_2.10" type="jar" ext="jar" status="no" details="" size="38323" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/templates_2.10/jars/templates_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/play/templates_2.10/2.1.0/templates_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.scala-incubator.io" name="scala-io-file_2.10">
+			<revision name="0.4.2" status="release" pubdate="20130122232132" resolver="public" artresolver="public" homepage="http://jesseeichar.github.com/scala-io-doc/index.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="41">
+				<license name="Scala License" url="http://www.scala-lang.org/node/146"/>
+				<metadata-artifact status="no" details="" size="2953" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scala-incubator.io/scala-io-file_2.10/ivy-0.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/github/scala-incubator/io/scala-io-file_2.10/0.4.2/scala-io-file_2.10-0.4.2.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="2.1.0"/>
+				<caller organisation="play" name="play-iteratees_2.10" conf="compile, runtime" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="2.1.0"/>
+				<caller organisation="play" name="templates_2.10" conf="compile, runtime" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="scala-io-file_2.10" type="jar" ext="jar" status="no" details="" size="437576" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scala-incubator.io/scala-io-file_2.10/jars/scala-io-file_2.10-0.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/github/scala-incubator/io/scala-io-file_2.10/0.4.2/scala-io-file_2.10-0.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.scala-incubator.io" name="scala-io-core_2.10">
+			<revision name="0.4.2" status="release" pubdate="20130122232148" resolver="public" artresolver="public" homepage="http://jesseeichar.github.com/scala-io-doc/index.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="42">
+				<license name="Scala License" url="http://www.scala-lang.org/node/146"/>
+				<metadata-artifact status="no" details="" size="2930" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scala-incubator.io/scala-io-core_2.10/ivy-0.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/github/scala-incubator/io/scala-io-core_2.10/0.4.2/scala-io-core_2.10-0.4.2.pom"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-file_2.10" conf="compile, runtime" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="0.4.2"/>
+				<artifacts>
+					<artifact name="scala-io-core_2.10" type="jar" ext="jar" status="no" details="" size="1295513" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scala-incubator.io/scala-io-core_2.10/jars/scala-io-core_2.10-0.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/github/scala-incubator/io/scala-io-core_2.10/0.4.2/scala-io-core_2.10-0.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jsuereth" name="scala-arm_2.10">
+			<revision name="1.3" status="release" pubdate="20130121090254" resolver="public" artresolver="public" homepage="http://jsuereth.com/scala-arm" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="43">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2981" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.jsuereth/scala-arm_2.10/ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/jsuereth/scala-arm_2.10/1.3/scala-arm_2.10-1.3.pom"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.10" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="0.4.2"/>
+				<artifacts>
+					<artifact name="scala-arm_2.10" type="jar" ext="jar" status="no" details="" size="75459" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.jsuereth/scala-arm_2.10/jars/scala-arm_2.10-1.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/jsuereth/scala-arm_2.10/1.3/scala-arm_2.10-1.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.transaction" name="jta">
+			<revision name="1.1" status="release" pubdate="20081027182721" resolver="public" artresolver="public" homepage="http://java.sun.com/products/jta" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="65">
+				<metadata-artifact status="no" details="" size="2353" time="0" location="/homes/gws/jgilme1/.ivy2/cache/javax.transaction/jta/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="jta" type="jar" ext="jar" status="no" details="" size="15071" time="0" location="/homes/gws/jgilme1/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.0" status="release" pubdate="20121219232932" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="66">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2552" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3149351" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="play-exceptions">
+			<revision name="2.1.0" status="release" pubdate="20130506043612" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="39">
+				<metadata-artifact status="no" details="" size="2228" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play-exceptions/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/play/play-exceptions/2.1.0/play-exceptions-2.1.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="play-exceptions" type="jar" ext="jar" status="no" details="" size="4555" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/play-exceptions/jars/play-exceptions-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/play/play-exceptions/2.1.0/play-exceptions-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="sbt-link">
+			<revision name="2.1.0" status="release" pubdate="20130506043610" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="37">
+				<metadata-artifact status="no" details="" size="2379" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/sbt-link/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/play/sbt-link/2.1.0/sbt-link-2.1.0.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="sbt-link" type="jar" ext="jar" status="no" details="" size="8477" time="0" location="/homes/gws/jgilme1/.ivy2/cache/play/sbt-link/jars/sbt-link-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/releases/play/sbt-link/2.1.0/sbt-link-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.javassist" name="javassist">
+			<revision name="3.16.1-GA" status="release" pubdate="20120306073712" resolver="public" artresolver="public" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="38">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="3064" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.javassist/javassist/ivy-3.16.1-GA.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/javassist/javassist/3.16.1-GA/javassist-3.16.1-GA.pom"/>
+				<caller organisation="play" name="sbt-link" conf="compile, runtime" rev="3.16.1-GA" rev-constraint-default="3.16.1-GA" rev-constraint-dynamic="3.16.1-GA" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="javassist" type="jar" ext="jar" status="no" details="" size="659343" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.javassist/javassist/jars/javassist-3.16.1-GA.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/javassist/javassist/3.16.1-GA/javassist-3.16.1-GA.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="taggercore_2.10">
+			<revision name="0.2" status="integration" pubdate="20130920091333" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
+				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
+				<caller organisation="edu.washington.cs.knowitall" name="webapp_2.10" conf="optional, compile, provided, compile-internal" rev="0.2" rev-constraint-default="0.2" rev-constraint-dynamic="0.2" callerrev="0.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jdom" name="jdom2">
+			<revision name="2.0.5" status="release" pubdate="20130428143558" resolver="public" artresolver="public" homepage="http://www.jdom.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="35">
+				<license name="Similar to Apache License but with the acknowledgment clause removed" url="https://raw.github.com/hunterhacker/jdom/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2872" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.jdom/jdom2/ivy-2.0.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jdom/jdom2/2.0.5/jdom2-2.0.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.0.5" rev-constraint-default="2.0.5" rev-constraint-dynamic="2.0.5" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="jdom2" type="jar" ext="jar" status="no" details="" size="299658" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.jdom/jdom2/jars/jdom2-2.0.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jdom/jdom2/2.0.5/jdom2-2.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.1" status="release" pubdate="20111114232705" resolver="public" artresolver="public" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="34">
+				<metadata-artifact status="no" details="" size="7774" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="2.1.0"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="315805" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="openregex">
+			<revision name="1.0.3" status="release" pubdate="20121231131039" resolver="public" artresolver="public" homepage="http://knowitall.github.com/openregex/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="33">
+				<license name="LGPL (GNU Lesser General Public License)" url="http://www.gnu.org/licenses/lgpl.html"/>
+				<metadata-artifact status="no" details="" size="3591" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/openregex/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/openregex/1.0.3/openregex-1.0.3.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="openregex" type="jar" ext="jar" status="no" details="" size="64944" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/openregex/jars/openregex-1.0.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/openregex/1.0.3/openregex-1.0.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-typer-stanford_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122227" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="23">
+				<license name="GPL 2.0 " url="http://www.gnu.org/licenses/gpl-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3745" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-typer-stanford_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-typer-stanford_2.10/2.4.2/nlptools-typer-stanford_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="nlptools-typer-stanford_2.10" type="jar" ext="jar" status="no" details="" size="16213" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-typer-stanford_2.10/jars/nlptools-typer-stanford_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-typer-stanford_2.10/2.4.2/nlptools-typer-stanford_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.stanford-corenlp" name="stanford-ner-models">
+			<revision name="1.3.5" status="release" pubdate="20130524085735" resolver="public" artresolver="public" homepage="http://nlp.stanford.edu/software/corenlp.shtml" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="32">
+				<metadata-artifact status="no" details="" size="3375" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.stanford-corenlp/stanford-ner-models/ivy-1.3.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/stanford-corenlp/stanford-ner-models/1.3.5/stanford-ner-models-1.3.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-typer-stanford_2.10" conf="default, compile, runtime, master" rev="1.3.5" rev-constraint-default="1.3.5" rev-constraint-dynamic="1.3.5" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="stanford-ner-models" type="jar" ext="jar" status="no" details="" size="95326817" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.stanford-corenlp/stanford-ner-models/jars/stanford-ner-models-1.3.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/stanford-corenlp/stanford-ner-models/1.3.5/stanford-ner-models-1.3.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.stanford.nlp" name="stanford-corenlp">
+			<revision name="1.3.5" status="release" pubdate="20130417120914" resolver="public" artresolver="public" homepage="http://nlp.stanford.edu/software/corenlp.shtml" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="24">
+				<license name="GNU General Public License Version 2" url="http://www.gnu.org/licenses/gpl-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3598" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.stanford.nlp/stanford-corenlp/ivy-1.3.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-typer-stanford_2.10" conf="default, compile, runtime, master" rev="1.3.5" rev-constraint-default="1.3.5" rev-constraint-dynamic="1.3.5" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="stanford-corenlp" type="jar" ext="jar" status="no" details="" size="4536284" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.stanford.nlp/stanford-corenlp/jars/stanford-corenlp-1.3.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="de.jollyday" name="jollyday">
+			<revision name="0.4.7" status="release" pubdate="20121104160012" resolver="public" artresolver="public" homepage="http://sourceforge.net/projects/jollyday" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="30">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4099" time="0" location="/homes/gws/jgilme1/.ivy2/cache/de.jollyday/jollyday/ivy-0.4.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/de/jollyday/jollyday/0.4.7/jollyday-0.4.7.pom"/>
+				<caller organisation="edu.stanford.nlp" name="stanford-corenlp" conf="compile, runtime" rev="0.4.7" rev-constraint-default="0.4.7" rev-constraint-dynamic="0.4.7" callerrev="1.3.5"/>
+				<artifacts>
+					<artifact name="jollyday" type="jar" ext="jar" status="no" details="" size="200993" time="0" location="/homes/gws/jgilme1/.ivy2/cache/de.jollyday/jollyday/jars/jollyday-0.4.7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/de/jollyday/jollyday/0.4.7/jollyday-0.4.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.xml.bind" name="jaxb-api">
+			<revision name="2.2.7" status="release" pubdate="20120524023721" resolver="public" artresolver="public" homepage="http://jaxb.java.net/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="31">
+				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<metadata-artifact status="no" details="" size="3149" time="0" location="/homes/gws/jgilme1/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom"/>
+				<caller organisation="de.jollyday" name="jollyday" conf="compile, runtime" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="0.4.7"/>
+				<artifacts>
+					<artifact name="jaxb-api" type="jar" ext="jar" status="no" details="" size="100146" time="0" location="/homes/gws/jgilme1/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.1" status="release" pubdate="20120222082242" resolver="public" artresolver="public" homepage="http://joda-time.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="29">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3297" time="0" location="/homes/gws/jgilme1/.ivy2/cache/joda-time/joda-time/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/joda-time/joda-time/2.1/joda-time-2.1.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="2.1.0"/>
+				<caller organisation="edu.stanford.nlp" name="stanford-corenlp" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="1.3.5"/>
+				<caller organisation="de.jollyday" name="jollyday" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="0.4.7"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="570478" time="0" location="/homes/gws/jgilme1/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/joda-time/joda-time/2.1/joda-time-2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="1.2" status="release" pubdate="20111027125117" resolver="public" artresolver="public" homepage="http://joda-convert.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="54">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3114" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.joda/joda-convert/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.pom"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.1.0"/>
+				<artifacts>
+					<artifact name="joda-convert" type="jar" ext="jar" status="no" details="" size="38460" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xom" name="xom">
+			<revision name="1.2.5" status="release" pubdate="20100511232210" resolver="public" artresolver="public" homepage="http://xom.nu" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="25">
+				<license name="The GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="2786" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xom/xom/ivy-1.2.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom"/>
+				<caller organisation="edu.stanford.nlp" name="stanford-corenlp" conf="compile, runtime" rev="1.2.5" rev-constraint-default="1.2.5" rev-constraint-dynamic="1.2.5" callerrev="1.3.5"/>
+				<artifacts>
+					<artifact name="xom" type="jar" ext="jar" status="no" details="" size="308863" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xom/xom/jars/xom-1.2.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xalan" name="xalan">
+			<revision name="2.7.0" status="release" pubdate="20051108140738" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="28">
+				<metadata-artifact status="no" details="" size="2448" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xalan/xalan/ivy-2.7.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/xalan/xalan/2.7.0/xalan-2.7.0.pom"/>
+				<caller organisation="xom" name="xom" conf="compile, runtime" rev="2.7.0" rev-constraint-default="2.7.0" rev-constraint-dynamic="2.7.0" callerrev="1.2.5"/>
+				<artifacts>
+					<artifact name="xalan" type="jar" ext="jar" status="no" details="" size="2730442" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xalan/xalan/jars/xalan-2.7.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xalan/xalan/2.7.0/xalan-2.7.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xerces" name="xercesImpl">
+			<revision name="2.8.0" status="release" pubdate="20060512133229" resolver="public" artresolver="public" homepage="http://xerces.apache.org/xerces2-j" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="27">
+				<metadata-artifact status="no" details="" size="2829" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xerces/xercesImpl/ivy-2.8.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.pom"/>
+				<caller organisation="xom" name="xom" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="1.2.5"/>
+				<artifacts>
+					<artifact name="xercesImpl" type="jar" ext="jar" status="no" details="" size="1207073" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.8.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xml-apis" name="xml-apis">
+			<revision name="1.3.03" status="release" pubdate="20060512120702" resolver="public" artresolver="public" homepage="http://xml.apache.org/commons/#external" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="26">
+				<metadata-artifact status="no" details="" size="2225" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xml-apis/xml-apis/ivy-1.3.03.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.pom"/>
+				<caller organisation="xalan" name="xalan" conf="compile, runtime" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.7.0"/>
+				<caller organisation="xom" name="xom" conf="compile, runtime" rev="1.3.03" rev-constraint-default="1.3.03" rev-constraint-dynamic="1.3.03" callerrev="1.2.5"/>
+				<caller organisation="xerces" name="xercesImpl" conf="compile, runtime" rev="1.3.03" rev-constraint-default="1.3.03" rev-constraint-dynamic="1.3.03" callerrev="2.8.0"/>
+				<artifacts>
+					<artifact name="xml-apis" type="jar" ext="jar" status="no" details="" size="195119" time="0" location="/homes/gws/jgilme1/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.3.03.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.0.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="1.3.03"/>
+				<caller organisation="xalan" name="xalan" conf="compile, runtime" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.7.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-stem-morpha_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122208" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="15">
+				<license name="Academic License (for original lex files)" url="http://www.informatics.sussex.ac.uk/research/groups/nlp/carroll/morph.tar.gz"/>
+				<license name="Apache 2.0 (for supplemental code)" url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="3892" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-stem-morpha_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-stem-morpha_2.10/2.4.2/nlptools-stem-morpha_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="nlptools-stem-morpha_2.10" type="jar" ext="jar" status="no" details="" size="4165" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-stem-morpha_2.10/jars/nlptools-stem-morpha_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-stem-morpha_2.10/2.4.2/nlptools-stem-morpha_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="morpha-stemmer">
+			<revision name="1.0.4" status="release" pubdate="20120910133619" resolver="public" artresolver="public" homepage="http://www.informatics.sussex.ac.uk/research/groups/nlp/carroll/morph.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="22">
+				<license name="Academic License" url="http://www.informatics.sussex.ac.uk/research/groups/nlp/carroll/morph.tar.gz"/>
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2996" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/morpha-stemmer/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/morpha-stemmer/1.0.4/morpha-stemmer-1.0.4.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-stem-morpha_2.10" conf="default, compile, runtime, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="morpha-stemmer" type="jar" ext="jar" status="no" details="" size="197052" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/morpha-stemmer/jars/morpha-stemmer-1.0.4.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/morpha-stemmer/1.0.4/morpha-stemmer-1.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.clearnlp" name="clearnlp">
+			<revision name="1.3.0" status="release" pubdate="20121229220156" resolver="public" artresolver="public" homepage="https://clearnlp.googlecode.com" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="16">
+				<license name="The BSD 2-Clause License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3754" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.googlecode.clearnlp/clearnlp/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/googlecode/clearnlp/clearnlp/1.3.0/clearnlp-1.3.0.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-stem-morpha_2.10" conf="default, compile, runtime, master" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="clearnlp" type="jar" ext="jar" status="no" details="" size="508463" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.googlecode.clearnlp/clearnlp/jars/clearnlp-1.3.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/googlecode/clearnlp/clearnlp/1.3.0/clearnlp-1.3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sourceforge.jregex" name="jregex">
+			<revision name="1.2_01" status="release" pubdate="20110719101121" resolver="public" artresolver="public" homepage="http://jregex.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="21">
+				<license name="BSD" url="http://jregex.sourceforge.net/license.txt"/>
+				<metadata-artifact status="no" details="" size="2451" time="0" location="/homes/gws/jgilme1/.ivy2/cache/net.sourceforge.jregex/jregex/ivy-1.2_01.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/net/sourceforge/jregex/jregex/1.2_01/jregex-1.2_01.pom"/>
+				<caller organisation="com.googlecode.clearnlp" name="clearnlp" conf="compile, runtime" rev="1.2_01" rev-constraint-default="1.2_01" rev-constraint-dynamic="1.2_01" callerrev="1.3.0"/>
+				<artifacts>
+					<artifact name="jregex" type="jar" ext="jar" status="no" details="" size="94885" time="0" location="/homes/gws/jgilme1/.ivy2/cache/net.sourceforge.jregex/jregex/jars/jregex-1.2_01.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/net/sourceforge/jregex/jregex/1.2_01/jregex-1.2_01.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.carrotsearch" name="hppc">
+			<revision name="0.4.1" status="release" pubdate="20110712080243" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="20">
+				<metadata-artifact status="no" details="" size="4619" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.carrotsearch/hppc/ivy-0.4.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/carrotsearch/hppc/0.4.1/hppc-0.4.1.pom"/>
+				<caller organisation="com.googlecode.clearnlp" name="clearnlp" conf="compile, runtime" rev="0.4.1" rev-constraint-default="0.4.1" rev-constraint-dynamic="0.4.1" callerrev="1.3.0"/>
+				<artifacts>
+					<artifact name="hppc" type="jar" ext="jar" status="no" details="" size="1227166" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.carrotsearch/hppc/jars/hppc-0.4.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/carrotsearch/hppc/0.4.1/hppc-0.4.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-compress">
+			<revision name="1.4.1" status="release" pubdate="20120521215732" resolver="public" artresolver="public" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="18">
+				<metadata-artifact status="no" details="" size="7888" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
+				<caller organisation="com.googlecode.clearnlp" name="clearnlp" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="1.3.0"/>
+				<artifacts>
+					<artifact name="commons-compress" type="jar" ext="jar" status="no" details="" size="241367" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.tukaani" name="xz">
+			<revision name="1.0" status="release" pubdate="20111022024446" resolver="public" artresolver="public" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="19">
+				<license name="Public Domain"/>
+				<metadata-artifact status="no" details="" size="2277" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.tukaani/xz/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.pom"/>
+				<caller organisation="org.apache.commons" name="commons-compress" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.4.1"/>
+				<artifacts>
+					<artifact name="xz" type="jar" ext="jar" status="no" details="" size="94672" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="args4j" name="args4j">
+			<revision name="2.0.16" status="release" pubdate="20110729060825" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="17">
+				<metadata-artifact status="no" details="" size="2418" time="0" location="/homes/gws/jgilme1/.ivy2/cache/args4j/args4j/ivy-2.0.16.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/args4j/args4j/2.0.16/args4j-2.0.16.pom"/>
+				<caller organisation="com.googlecode.clearnlp" name="clearnlp" conf="compile, runtime" rev="2.0.16" rev-constraint-default="2.0.16" rev-constraint-dynamic="2.0.16" callerrev="1.3.0"/>
+				<artifacts>
+					<artifact name="args4j" type="jar" ext="jar" status="no" details="" size="56298" time="0" location="/homes/gws/jgilme1/.ivy2/cache/args4j/args4j/jars/args4j-2.0.16.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/args4j/args4j/2.0.16/args4j-2.0.16.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-chunk-opennlp_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122250" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="7">
+				<license name="Apache 2.0 " url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="3858" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-chunk-opennlp_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-chunk-opennlp_2.10/2.4.2/nlptools-chunk-opennlp_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="nlptools-chunk-opennlp_2.10" type="jar" ext="jar" status="no" details="" size="10353" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-chunk-opennlp_2.10/jars/nlptools-chunk-opennlp_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-chunk-opennlp_2.10/2.4.2/nlptools-chunk-opennlp_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="opennlp-chunk-models">
+			<revision name="1.5" status="release" pubdate="20120607105936" resolver="public" artresolver="public" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="14">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3447" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-chunk-models/ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-chunk-models/1.5/opennlp-chunk-models-1.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-chunk-opennlp_2.10" conf="default, compile, runtime, master" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="opennlp-chunk-models" type="jar" ext="jar" status="no" details="" size="2563111" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-chunk-models/jars/opennlp-chunk-models-1.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-chunk-models/1.5/opennlp-chunk-models-1.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-postag-opennlp_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122241" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="8">
+				<license name="Apache 2.0 " url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="3864" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-postag-opennlp_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-postag-opennlp_2.10/2.4.2/nlptools-postag-opennlp_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-chunk-opennlp_2.10" conf="default, compile, runtime, master" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="nlptools-postag-opennlp_2.10" type="jar" ext="jar" status="no" details="" size="9370" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-postag-opennlp_2.10/jars/nlptools-postag-opennlp_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-postag-opennlp_2.10/2.4.2/nlptools-postag-opennlp_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="opennlp-postag-models">
+			<revision name="1.5" status="release" pubdate="20120607105845" resolver="public" artresolver="public" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="13">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3449" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-postag-models/ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-postag-models/1.5/opennlp-postag-models-1.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-postag-opennlp_2.10" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="opennlp-postag-models" type="jar" ext="jar" status="no" details="" size="5699943" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-postag-models/jars/opennlp-postag-models-1.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-postag-models/1.5/opennlp-postag-models-1.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-tokenize-opennlp_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122215" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
+				<license name="Apache 2.0 " url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="3860" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-opennlp_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-tokenize-opennlp_2.10/2.4.2/nlptools-tokenize-opennlp_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-postag-opennlp_2.10" conf="compile, runtime" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="nlptools-tokenize-opennlp_2.10" type="jar" ext="jar" status="no" details="" size="10514" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-opennlp_2.10/jars/nlptools-tokenize-opennlp_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-tokenize-opennlp_2.10/2.4.2/nlptools-tokenize-opennlp_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall" name="opennlp-tokenize-models">
+			<revision name="1.5" status="release" pubdate="20120607105800" resolver="public" artresolver="public" homepage="http://opennlp.apache.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="12">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3455" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-tokenize-models/ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-tokenize-models/1.5/opennlp-tokenize-models-1.5.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-tokenize-opennlp_2.10" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="opennlp-tokenize-models" type="jar" ext="jar" status="no" details="" size="442008" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall/opennlp-tokenize-models/jars/opennlp-tokenize-models-1.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/opennlp-tokenize-models/1.5/opennlp-tokenize-models-1.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.opennlp" name="opennlp-tools">
+			<revision name="1.5.3" status="release" pubdate="20130403060341" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="10">
+				<metadata-artifact status="no" details="" size="4743" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.opennlp/opennlp-tools/ivy-1.5.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.5.3/opennlp-tools-1.5.3.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-chunk-opennlp_2.10" conf="default, compile, runtime, master" rev="1.5.3" rev-constraint-default="1.5.3" rev-constraint-dynamic="1.5.3" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-tokenize-opennlp_2.10" conf="compile, runtime" rev="1.5.3" rev-constraint-default="1.5.3" rev-constraint-dynamic="1.5.3" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-postag-opennlp_2.10" conf="compile, runtime" rev="1.5.3" rev-constraint-default="1.5.3" rev-constraint-dynamic="1.5.3" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="opennlp-tools" type="bundle" ext="jar" status="no" details="" size="821371" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.opennlp/opennlp-tools/bundles/opennlp-tools-1.5.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.5.3/opennlp-tools-1.5.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.opennlp" name="opennlp-maxent">
+			<revision name="3.0.3" status="release" pubdate="20130403060108" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="11">
+				<metadata-artifact status="no" details="" size="4049" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.opennlp/opennlp-maxent/ivy-3.0.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-maxent/3.0.3/opennlp-maxent-3.0.3.pom"/>
+				<caller organisation="org.apache.opennlp" name="opennlp-tools" conf="compile, runtime" rev="3.0.3" rev-constraint-default="3.0.3" rev-constraint-dynamic="3.0.3" callerrev="1.5.3"/>
+				<artifacts>
+					<artifact name="opennlp-maxent" type="bundle" ext="jar" status="no" details="" size="130387" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.apache.opennlp/opennlp-maxent/bundles/opennlp-maxent-3.0.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-maxent/3.0.3/opennlp-maxent-3.0.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10">
+			<revision name="2.4.2" status="release" pubdate="20130524122218" resolver="public" artresolver="public" homepage="https://github.com/knowitall/nlptools" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="3">
+				<license name="Apache 2.0 " url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="3677" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-core_2.10/ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-core_2.10/2.4.2/nlptools-core_2.10-2.4.2.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-typer-stanford_2.10" conf="default, compile, runtime, master" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="0.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-tokenize-opennlp_2.10" conf="compile, runtime" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-stem-morpha_2.10" conf="default, compile, runtime, master" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="nlptools-core_2.10" type="jar" ext="jar" status="no" details="" size="536271" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.nlptools/nlptools-core_2.10/jars/nlptools-core_2.10-2.4.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/nlptools/nlptools-core_2.10/2.4.2/nlptools-core_2.10-2.4.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.2" status="release" pubdate="20121011115524" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
+				<metadata-artifact status="no" details="" size="4469" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.pom"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.6.6"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.1.0"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.0.7"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="2.1.0"/>
+				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="1.6.2" rev-constraint-default="1.6.2" rev-constraint-dynamic="1.6.2" callerrev="1.7.6"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.4.2"/>
+				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.6.6"/>
+				<caller organisation="net.sf.ehcache" name="ehcache-core" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="2.6.0"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="26083" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.6.1" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*)" position="-1">
+				<evicted-by rev="1.7.2"/>
+				<caller organisation="net.sf.ehcache" name="ehcache-core" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="2.6.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.6.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*)" position="-1">
+				<evicted-by rev="1.7.2"/>
+				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="1.6.2" rev-constraint-default="1.6.2" rev-constraint-dynamic="1.6.2" callerrev="1.7.6"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.6.6" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="1.7.2"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.6.6"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.1.0"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.0.7"/>
+				<caller organisation="play" name="play_2.10" conf="default, compile, runtime, master" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="2.1.0"/>
+				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="1.6.2" rev-constraint-default="1.6.2" rev-constraint-dynamic="1.6.2" callerrev="1.7.6"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="2.4.2"/>
+				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.6.6" rev-constraint-default="1.6.6" rev-constraint-dynamic="1.6.6" callerrev="1.6.6"/>
+				<caller organisation="net.sf.ehcache" name="ehcache-core" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="2.6.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.scopt" name="scopt_2.10">
+			<revision name="2.1.0" status="release" pubdate="20121220092627" resolver="public" artresolver="public" homepage="https://github.com/scopt/scopt" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="5">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="2766" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scopt/scopt_2.10/ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/github/scopt/scopt_2.10/2.1.0/scopt_2.10-2.1.0.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10" conf="default, compile, runtime, master" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="scopt_2.10" type="jar" ext="jar" status="no" details="" size="124199" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.github.scopt/scopt_2.10/jars/scopt_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/github/scopt/scopt_2.10/2.1.0/scopt_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="edu.washington.cs.knowitall.common-scala" name="common-scala_2.10">
+			<revision name="1.1.1" status="release" pubdate="20130409172038" resolver="public" artresolver="public" homepage="https://github.com/knowitall/common-scala" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
+				<license name="BSD 3-clause License" url="http://www.opensource.org/licenses/bsd-3-clause"/>
+				<metadata-artifact status="no" details="" size="2820" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.common-scala/common-scala_2.10/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/common-scala/common-scala_2.10/1.1.1/common-scala_2.10-1.1.1.pom"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10" conf="default, compile, runtime, master" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="2.4.2"/>
+				<artifacts>
+					<artifact name="common-scala_2.10" type="jar" ext="jar" status="no" details="" size="323702" time="0" location="/homes/gws/jgilme1/.ivy2/cache/edu.washington.cs.knowitall.common-scala/common-scala_2.10/jars/common-scala_2.10-1.1.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/edu/washington/cs/knowitall/common-scala/common-scala_2.10/1.1.1/common-scala_2.10-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.0" status="release" pubdate="20121219232916" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2392" time="0" location="/homes/gws/jgilme1/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.0/scala-library-2.10.0.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.1.0"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-typer-stanford_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.common-scala" name="common-scala_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.1.1"/>
+				<caller organisation="edu.washington.cs.knowitall" name="webapp_2.10" conf="optional, compile, provided, compile-internal" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.0"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.2" callerrev="0.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-chunk-opennlp_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-tokenize-opennlp_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<caller organisation="com.github.scopt" name="scopt_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.1.0"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-stem-morpha_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-file_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.4.2"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.4.2"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.10.0"/>
+				<caller organisation="org.scala-stm" name="scala-stm_2.10.0" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.6"/>
+				<caller organisation="com.jsuereth" name="scala-arm_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.3"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.1.0"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-core_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<caller organisation="edu.washington.cs.knowitall.nlptools" name="nlptools-postag-opennlp_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.1" callerrev="2.4.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="13.0.1" status="release" pubdate="20120828082726" resolver="public" artresolver="public" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="2">
+				<metadata-artifact status="no" details="" size="3505" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.google.guava/guava/ivy-13.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/google/guava/guava/13.0.1/guava-13.0.1.pom"/>
+				<caller organisation="edu.washington.cs.knowitall" name="openregex" conf="default, compile, runtime, master" rev="13.0.1" rev-constraint-default="13.0.1" rev-constraint-dynamic="13.0.1" callerrev="1.0.3"/>
+				<caller organisation="edu.washington.cs.knowitall" name="taggercore_2.10" conf="compile" rev="13.0.1" rev-constraint-default="13.0.1" rev-constraint-dynamic="13.0.1" callerrev="0.2"/>
+				<artifacts>
+					<artifact name="guava" type="jar" ext="jar" status="no" details="" size="1891110" time="0" location="/homes/gws/jgilme1/.ivy2/cache/com.google.guava/guava/jars/guava-13.0.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/guava/guava/13.0.1/guava-13.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

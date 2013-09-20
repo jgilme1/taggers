@@ -1,0 +1,24 @@
+@(regexForm: Form[(String,String)])
+
+@main(title = "Title"){
+
+  @helper.form(action = routes.Application.process){
+  
+     @helper.inputText(
+       field = regexForm("path"),
+       args = '_label -> "Path To Taggers Directory", 'size -> 100
+     )
+     
+     @helper.textarea(
+       field = regexForm("input"),
+       args = '_label -> "Input Text: ", 'rows -> 15, 'cols ->100
+     )
+     
+     <p class="buttons">
+     	<input type="submit" id="submit">
+     <p>
+  
+  }
+
+
+}
