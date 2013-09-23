@@ -213,7 +213,7 @@ public class PatternTagger extends Tagger {
                     }
             }
 
-            Type tag = Type.fromSentence(sentence, this.descriptor, this.source, intervalFromGroup(group0),groupMap);
+            Type tag = Type.fromSentenceWithGroupMap(sentence, this.descriptor, this.source, intervalFromGroup(group0),groupMap);
             tags.add(tag);
         }
 

@@ -34,32 +34,42 @@ public class Type implements Serializable, XmlSerializable, Comparable<Type> {
         this.match = match;
         this.groupMap = groupMap;
     }
-
-    public Type(List<String> tokens, String descriptor, String source, String match,
-            Interval interval, Map<String,String> groupMap) {
-        this(Joiner.on(" ").join(tokens), descriptor, source, match, interval, groupMap);
+    
+    public Type(String text, String descriptor, String source, String match, Interval interval){
+    	this(text,descriptor,source,match,interval,new HashMap<String,String>());
     }
 
-    public Type(String[] tokens, String descriptor, String source, String match, Interval interval, Map<String,String> groupMap) {
-        this(Arrays.asList(tokens), descriptor, source, null, interval, groupMap);
+    public Type(List<String> tokens, String descriptor, String source, String match,
+            Interval interval) {
+        this(Joiner.on(" ").join(tokens), descriptor, source, match, interval);
+    }
+
+    public Type(String[] tokens, String descriptor, String source, String match, Interval interval) {
+        this(Arrays.asList(tokens), descriptor, source, null, interval);
     }
 
     public static Type fromSentence(List<Lemmatized<ChunkedToken>> sentence, String descriptor, String source, String match,
+            Interval interval) {
+        return new Type(getTypeTextFromInterval(sentence,interval), descriptor, source, match, interval);
+    }
+    
+    public static Type fromSentenceWithGroupMap(List<Lemmatized<ChunkedToken>> sentence, String descriptor, String source,
             Interval interval, Map<String,String> groupMap) {
-        // build tyep string from tokens
-        StringBuilder builder = new StringBuilder();
-        for (Lemmatized<ChunkedToken> token : sentence.subList(interval.start(), interval.end())) {
-            builder.append(token.token().string() + " ");
-        }
-        //Map<String,String> groupMap = new HashMap<String,String>();
-
-        return new Type(builder.toString().trim(), descriptor, source, match, interval, groupMap);
+        return new Type(getTypeTextFromInterval(sentence,interval),descriptor,source,null,interval,groupMap);
     }
 
 
     public static Type fromSentence(List<Lemmatized<ChunkedToken>> sentence, String descriptor, String source,
             Interval interval, Map<String,String> groupMap) {
-        return fromSentence(sentence, descriptor, source, null, interval, groupMap);
+        return fromSentence(sentence, descriptor, source, null, interval);
+    }
+    
+    private static String getTypeTextFromInterval(List<Lemmatized<ChunkedToken>> sentence, Interval interval){
+        StringBuilder builder = new StringBuilder();
+        for (Lemmatized<ChunkedToken> token : sentence.subList(interval.start(), interval.end())) {
+            builder.append(token.token().string() + " ");
+        }
+        return builder.toString().trim();
     }
 
     /***
@@ -156,7 +166,7 @@ public class Type implements Serializable, XmlSerializable, Comparable<Type> {
         Interval interval = Interval$.MODULE$.open(
                 Integer.parseInt(e.getAttributeValue("start")),
                 Integer.parseInt(e.getAttributeValue("end")));
-        return Type.fromSentence(sentence, e.getAttributeValue("descriptor"), e.getAttributeValue("source"), e.getAttributeValue("match"), interval, new HashMap<String,String>());
+        return Type.fromSentence(sentence, e.getAttributeValue("descriptor"), e.getAttributeValue("source"), e.getAttributeValue("match"), interval);
     }
 
     @Override

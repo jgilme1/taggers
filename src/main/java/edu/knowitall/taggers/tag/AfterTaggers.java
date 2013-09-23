@@ -39,7 +39,7 @@ public class AfterTaggers {
         for (Type tag : initialTags) {
             for (Interval interval : npChunkIntervals(sentence)) {
                 if (interval.superset(tag.interval())) {
-                    tags.add(Type.fromSentence(sentence, tag.descriptor(), tag.source(), tag.match(), interval, new HashMap<String,String>()));
+                    tags.add(Type.fromSentence(sentence, tag.descriptor(), tag.source(), tag.match(), interval));
                 }
             }
         }
@@ -61,7 +61,7 @@ public class AfterTaggers {
 
                 if (tag.interval().end() == headwordEndIndex + 1) {
                     return Type.fromSentence(tokens, tag.descriptor(), tag.source(), tag.match(),
-                            interval, new HashMap<String,String>());
+                            interval);
                 }
             }
         }
