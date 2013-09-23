@@ -81,7 +81,7 @@ public class TripleExtractorApp {
 	                tokens.add(lemma);
 	            }
 	            
-	            pw.write(line+"\t");
+	            pw.write(line.trim()+"\t");
 	            for(Lemmatized<ChunkedToken> tok: tokens){
 	            	pw.write(tok.token().postag()+" ");
 	            }	            
@@ -97,12 +97,6 @@ public class TripleExtractorApp {
 	                    x.add(type);
 	            		levelMap.put(level,x);
 	            	}
-//	            	pw.write(type.interval().toString());
-//	            	pw.write(type.match());
-//	            	if(type.source() != null)
-//	            	  pw.write(type.source());
-//	            	pw.write(type.descriptor());
-//	                pw.write(type + "\n");
 	            }
 	            
 	            for(String level: directoryList){
@@ -131,11 +125,6 @@ public class TripleExtractorApp {
 		            	}
 	            	}
 	            }
-	            
-	            
-	            
-	            
-	            
 	            pw.write("\n");
 				
 			}
