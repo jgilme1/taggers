@@ -113,6 +113,7 @@ public class TripleExtractorApp {
 		            	for(Type type: levelTypes){
 
 		            		pw.write(type + " ");
+		            		//if we are at the highest level write group matches as well
 		            		if(directoryList.get(directoryList.size()-1) == level){
 			            		Map<String,String> groupMap = type.groupMap();
 			            		if(!groupMap.isEmpty()){
@@ -120,6 +121,7 @@ public class TripleExtractorApp {
 			            				pw.write("\t"+k+"-"+groupMap.get(k));
 			            				
 			            			}
+							pw.write("\t");
 			            		}
 		            		}
 		            	}
@@ -156,7 +158,7 @@ public class TripleExtractorApp {
 			for(File x: subDir.listFiles()){
 				String xString = FileUtils.readFileToString(x);
 				for(String descriptionString : typeDescriptors){
-					if(xString.indexOf("descriptor=\""+descriptionString) != -1){
+					if(xString.indexOf("descriptor=\""+descriptionString+"\">") != -1){
 						return level;
 					}
 					
