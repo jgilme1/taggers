@@ -1,20 +1,33 @@
 package edu.knowitall.taggers.app;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.Document;
+
+import com.google.common.io.Files;
+
+import scala.util.matching.Regex;
+import scala.xml.XML;
 
 import edu.knowitall.collection.immutable.Interval;
 import edu.knowitall.taggers.Type;
+import edu.knowitall.taggers.tag.Tagger;
 import edu.knowitall.taggers.tag.TaggerCollection;
 import edu.knowitall.tool.chunk.ChunkedToken;
 import edu.knowitall.tool.chunk.OpenNlpChunker;
@@ -39,28 +52,36 @@ public class TripleExtractorApp {
 			
 			
 			TaggerCollection t = TaggerCollection.fromPath(taggerPath);
-			
+			TaggerCollection newT = new TaggerCollection();
 			
 			String inputFileString = FileUtils.readFileToString(new File(inputPath));
 			
 			//create map from subdirectory name to list of xml pattern file names
 			Map<String,List<String>> FileStringMap = new HashMap<String,List<String>>();
 			File taggerDirectory = new File(taggerPath);
+			List<File> dirList = Arrays.asList(taggerDirectory.listFiles());
+			java.util.Collections.sort(dirList);
 			
-			for(File d: taggerDirectory.listFiles()){
+			for(File d: dirList){
 				String key = d.getName();
 				List<String> xmlList = new ArrayList<String>();
-				for(File x: d.listFiles()){
-					if(x.getName().endsWith(".xml")){
-						xmlList.add(x.getName());
+				if(d.isDirectory()){
+					for(File x: d.listFiles()){
+						if(x.getName().endsWith(".xml")){
+							refactorPatterns(x,newT);
+							xmlList.add(x.getName());
+						}
+					}
+					if(!xmlList.isEmpty()){
+					 FileStringMap.put(key,xmlList);
 					}
 				}
-				FileStringMap.put(key,xmlList);
 			}
 			
 			//create sorted subdirectory list
 			List<String> directoryList = new ArrayList<String>(FileStringMap.keySet());
 			java.util.Collections.sort(directoryList);
+
 			
 			
 			
@@ -85,10 +106,11 @@ public class TripleExtractorApp {
 	            for(Lemmatized<ChunkedToken> tok: tokens){
 	            	pw.write(tok.token().postag()+" ");
 	            }	            
-	            List<Type> types = t.tag(tokens);
+	            List<Type> types = newT.tag(tokens);
 	            Map<String,List<Type>> levelMap = new HashMap<String,List<Type>>();
 	            for (Type type : types) {
 	            	String level = findLevel(type,taggerDirectory);
+	            	//System.out.println(type.descriptor() + " " + level);
 	            	if(levelMap.containsKey(level)){
 	            	    levelMap.get(level).add(type);
 	            	}
@@ -134,7 +156,30 @@ public class TripleExtractorApp {
 			pw.close();
 	}
 	
-	private static void writeHeader(PrintWriter pw, List<String> directoryList){		
+	private static void refactorPatterns(File x, TaggerCollection newT) throws IOException, JDOMException, IllegalArgumentException, ClassNotFoundException, NoSuchMethodException, InstantiationException, InvocationTargetException, IllegalAccessException {
+		String patternString = FileUtils.readFileToString(x);
+		Pattern typePattern = Pattern.compile("\\[type=([^\\]]+)\\]\\+");
+		
+		
+		Matcher typePatternMatcher = typePattern.matcher(patternString);
+		int start =0;
+		while(start < patternString.length() && typePatternMatcher.find(start)){
+			String group1 = typePatternMatcher.group(1);
+			String replacementString = "([typeStart="+group1+" &amp; typeEnd="+group1+"] | ([typeStart="+group1+"] [type="+group1+"]* [typeEnd="+group1+"]))";
+			patternString = patternString.substring(0, typePatternMatcher.start()) + replacementString + patternString.substring(typePatternMatcher.end());
+			start = typePatternMatcher.start() + replacementString.length();
+			typePatternMatcher = typePattern.matcher(patternString);
+		}
+		
+		InputStream is = new ByteArrayInputStream(patternString.getBytes());
+		SAXBuilder sb = new SAXBuilder();
+		Document doc = sb.build(is);
+		for(Tagger t : new TaggerCollection(doc).getTaggers()){
+			newT.addTagger(t);
+		}
+	}
+
+	private static void writeHeader(PrintWriter pw, List<String> directoryList){		 
 		pw.write("sentence\tpos");
 		
 		for(String subDirName: directoryList){
@@ -154,14 +199,16 @@ public class TripleExtractorApp {
 		}
 		
 		for(File subDir : taggerDirectory.listFiles()){
-			String level = subDir.getName();
-			for(File x: subDir.listFiles()){
-				String xString = FileUtils.readFileToString(x);
-				for(String descriptionString : typeDescriptors){
-					if(xString.indexOf("descriptor=\""+descriptionString+"\">") != -1){
-						return level;
+			if(subDir.isDirectory()){
+				String level = subDir.getName();
+				for(File x: subDir.listFiles()){
+					String xString = FileUtils.readFileToString(x);
+					for(String descriptionString : typeDescriptors){
+						if(xString.indexOf("descriptor=\""+descriptionString+"\">") != -1){
+							return level;
+						}
+						
 					}
-					
 				}
 			}
 		}

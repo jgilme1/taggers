@@ -196,4 +196,8 @@ public class TaggerCollection {
             }
         }
     }
+    
+    public List<Tagger> getTaggers(){
+    	return taggers;
+    }
 }
